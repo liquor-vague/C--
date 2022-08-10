@@ -1,0 +1,15 @@
+#iostream
+using namespace std;
+int main(){
+int a=10;
+int b=5;
+//前置递增为++a，即先递增再进行运算；后置递增为a++，即先运算本行代码，递增结果从下行代码起有效
+//cout<<++a*b<<endl;  55
+//cout<<a++*b<<endl;  50
+
+
+
+
+system("pause")
+return 0;
+}
