@@ -1,0 +1,21 @@
+//do...while与while的区别是前者先判断do内容后执行，后者直接执行
+
+
+#include<iostream>
+using namespace std;
+int main() {
+	int num = 0;
+	do {
+		cout << "请输入一个三位数" << endl;
+		cin >> num;
+		int a = num % 10;
+		int b = num / 10 % 10;
+		int c = num / 100;
+
+		if (num == a * a * a + b * b * b + c * c * c)
+			cout << num << "是水仙花数。\n";
+		break;
+	} while (num < 1000);
+	system("pause");
+	return 0;
+}
