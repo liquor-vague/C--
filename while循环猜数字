@@ -2,7 +2,8 @@
 using namespace std;
 #include<ctime>
 int main() {
-	srand((unsigned int)time(NULL));//生成随机数，保证每局数字不一样
+	srand((unsigned int)time(NULL));
+	//生成随机数，保证每局数字不一样
 	int a = rand()%101;
 	int b = 101;
 	while(b!=a) {
