@@ -12,6 +12,7 @@ int main() {
 	cout << endl;
 	system("pause");
 	return 0;
+//嵌套循环先执行完内循环，再执行一次外循环
 }
 
 
