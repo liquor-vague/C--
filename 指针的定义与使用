@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int age=1;
+	int*p;
+	//定义指针 ：数据名 变量名 
+	p=&age;
+	//指针指向age的地址 
+	cout<<"p的地址为"<<p<<endl;
+	cout<<"age的地址为"<<&age<<endl;
+	cout<<"age的值为"<<*p<<endl;
+	//*指针名 可以查找指针存放的数据 
+	*p=239;
+	//可以修改存放的数据 
+	cout<<"age的值为"<<*p<<endl;
+	return 0;
+  //指针相当于存放数据的门，*指针名 相当于开门的钥匙
+}
