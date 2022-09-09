@@ -17,6 +17,7 @@ int main() {
 	cout<<"a的值为"<<a<<endl;
 	cout<<"b的值为"<<b<<endl;
 	swap(a,b);
+	//实参不发生改变，void里的形参发生改变
 	system("pause");
 	return 0;
 }
