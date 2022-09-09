@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int a=10;
+	int b=9;
+	const int*p=&a;
+	cout<<p<<endl;
+	//const相当于限定词，限定数据的修改，const是常量，*是指针
+	//1.常量指针（指针指向可改，指针指向的数据不可改）
+	p=&b;
+	cout<<p<<endl;
+
+	//2.指针常量（指针的指向不可改，指针指向的数据可改）
+	int* const o=&a;
+	cout<<*o<<endl;
+	*o=8;
+	cout<<*o<<endl;
+
+	//3.const既修饰指针也修饰常量（指针指向不可改，指针指向的数据不可改）
+	const int*const i=&a;
+	cout<<i<<endl;
+}
