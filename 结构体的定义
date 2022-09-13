@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+#include<string>
+struct student {
+	string name;
+	int age;
+	float score;
+	//结构体属于用户自定义的数据类型，允许用户存储不同的数据类型
+};
+int main() {
+	struct student s1= {"王一",17,89 };
+//此处属于结构体创建变量，可省略struct
+	student s2;
+	s2.name="王二";
+	s2.age=18;
+	s2.score=90;
+	cout<<s1.name<<","<<s1.age<<","<<s1.score;
+	cout<<s2.name<<","<<s2.age<<","<<s2.score;
+}
