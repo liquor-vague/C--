@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+struct student {
+	string name;
+	int age;
+	int score;
+};
+int main() {
+//结构体数组
+	struct student arr[2] ={
+		{"王一",17,90},
+		{"王二",18,89}
+	};
+	for(int i=0; i<2; i++) {
+		cout<<arr[i].name<<arr[i].age<<arr[i].score<<endl;
+	};
+//结构体指针
+	struct student*p=&arr[0];
+	cout<<(*p).name<<(*p).age<<(*p).score<<endl;
+	system("pause");
+	return 0;
+}
