@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+struct student {
+	string name;
+	int age;
+	int score;
+};
+void print1(struct student s) {
+	s.age=200;
+	cout<<"姓名"<<s.name<<"年龄"<<s.age<<"分数"<<s.score<<endl;
+}
+void print2(struct student*p) {
+	//此处先设一个*p,main函数中将s的地址直接传入p
+	(*p).age=200;
+	cout<<"姓名"<<(*p).name<<"年龄"<<(*p).age<<"分数"<<(*p).score<<endl;
+}
+int main() {
+	student s= {"王一",20,100};
+	print1(s);
+	cout<<"姓名"<<s.name<<"年龄"<<s.age<<"分数"<<s.score<<endl;
+	//值传递，不改变实参
+	print2(&s);
+	cout<<"姓名"<<s.name<<"年龄"<<s.age<<"分数"<<s.score<<endl;
+	//地址传递，改变实参
+}
