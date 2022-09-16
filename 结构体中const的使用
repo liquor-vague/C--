@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+struct student {
+	string name;
+	int age;
+	int score;
+};
+void print(const student*p) {
+	cout<<(*p).name<<(*p).age<<(*p).score<<endl;
+}
+int main() {
+	student s= {"amy",20,100};
+	print(&s);
+}
