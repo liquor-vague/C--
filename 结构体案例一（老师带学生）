@@ -1,0 +1,48 @@
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+struct student {
+	string name;
+	int score;
+};
+struct teacher {
+	string name;
+	student sarr[5];
+};
+void AllocateSpace(struct teacher tarr[],int len1,int len2) {
+
+	string sname="学生";
+	string seedname="ABCDE";
+	for(int i=0; i<len1; i++) {
+		for(int j=0; j<len2; j++) {
+			tarr[i].sarr[j].name=sname+seedname[j];
+			tarr[i].sarr[j].score=rand() % 61 + 40;
+			//这个随机数函数不会写
+		}
+	}
+};
+void print(struct teacher tarr[],struct student sarr[],int len1,int len2) {
+	for(int i=0; i<len1; i++) {
+		cout<<"教师："<<tarr[i].name<<endl;
+		for(int j=0; j<len2; j++) {
+			cout<<"姓名："<<tarr[i].sarr[j].name<<"\t";
+			cout<<"成绩："<<tarr[i].sarr[j].score<<endl;
+		}
+		cout<<"\n";
+	}
+};
+
+int main() {
+	srand((unsigned int)time(NULL));
+	teacher tarr[3]= {{"王一"},{"王二"},{"王三"}};
+	student sarr[5];
+	int len1=sizeof(tarr)/sizeof(tarr[0]);
+	int len2=sizeof(sarr)/sizeof(sarr[0]);
+	AllocateSpace(tarr,len1,len2);
+	//此处传不了四个参数，为何？
+	print(tarr,sarr,len1,len2);
+	system("pause");
+	return 0;
+}
