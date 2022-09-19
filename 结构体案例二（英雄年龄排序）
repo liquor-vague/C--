@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+struct hero {
+	string name;
+	int age;
+	string gender;
+};
+int main() {
+	hero arr[5]= {
+		{"刘备",26,"男"},{"关羽",25,"男"},{"张飞",24,"男"},
+		{"关羽",29,"男"},{"貂蝉",19,"女"}
+	};
+	int len=sizeof(arr)/sizeof(arr[0]);
+	for(int i=0; i<len; i++) {
+		for(int j=0; j<len; j++) {
+			if(arr[j].age>arr[j+1].age) {
+				hero temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+				/*
+				第一次写时将每个变量都拆开写了，太复杂，而且不会虚设变量
+				arr[5].name=arr[j].name;
+				arr[5].age=arr[j].age;
+				arr[5].gender=arr[j].gender;
+
+				arr[j].name=arr[j+1].name;
+				arr[j].age=arr[j+1].age;
+				arr[j].gender=arr[j+1].gender;
+
+				arr[j+1].name=arr[5].name;
+				arr[j+1].age=arr[5].age;
+				arr[j+1].gender=arr[5].gender;
+				*/
+			};
+		}
+	};
+	//冒泡排序内循环和外循环各一次 
+	for(int i=0; i<len; i++) {
+		cout<<"姓名："<<arr[i].name<<"\t";
+		cout<<"年龄："<<arr[i].age<<"\t";
+		cout<<"性别："<<arr[i].gender<<endl;
+	}
+	system("pause");
+	return 0;
+}
