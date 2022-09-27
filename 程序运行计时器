@@ -1,0 +1,13 @@
+//程序运行计时器
+#include<time.h>
+#include<stdio.h>
+using namespace std;
+int main(){
+	clock_t start,finish;
+	double totaltime;
+	start=clock();
+	//……
+	finish=clock();
+	totaltime=(double)(finish-start)/CLOCKS_PER_SEC;
+	printf("\n%s%.2f","totaltime is\t",totaltime);
+} 
