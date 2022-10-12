@@ -18,8 +18,7 @@ int main(){
 		cout << "烂片\n";
 		break;
 	}
-
-	
+//switch之后括号内的表达式只能是整数（byte，short，char和int）或字符型表达式，不能是长整型或其它任何类型。
 	system("pause");
 	return 0;
 }
