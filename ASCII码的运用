@@ -1,0 +1,37 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main() {
+//1.将字符转为ASCII码
+	char a;
+	cout<<"请输入a的值："<<endl;
+	cin>>a;
+	int b=a;
+	cout<<b<<endl;
+//2.字符减去数字,结果就是ascii码相减的数值所对应的字符
+	char c='b'-32;
+	cout<<c<<endl;
+//3.字母的大小比较
+	char x1,x2;
+	cout<<"请输入x1,x2的值："<<endl;
+	cin>>x1>>x2;
+	if(x1>x2) {
+		cout<<x1<<">"<<x2<<endl;
+	} 
+	else {
+		cout<<x1<<"<"<<x2<<endl;
+	};
+//4.输入一个字符,判断是否为小写字母
+	char ch1;
+	cout<<"请输入ch1的值："<<endl;
+	cin >> ch1;
+	if (ch1 >='a'&& ch1<='z')
+	{
+		cout << "Yes";
+	}
+	else
+	{
+		cout << "No";
+	}
+	return 0;
+}
